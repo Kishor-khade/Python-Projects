@@ -4,9 +4,11 @@ from art import logo
 from clear import * 
 
 def get_number():
+    """It returns a random number between 1 to 100"""
     return random.randrange(1,100)
 
 def find(number):
+    """Check weather the given number is lesser or greater or equals to the guess or not """
     user_input = int(input("    Make a guess  :  "))
     if user_input == number:
         return 1
@@ -18,6 +20,7 @@ def find(number):
         return 0
 
 def easy(number):
+    """Set's the difficulty mode to easy"""
     for i in range(10):
         print(f"    {10-i} rounds remaining")
         if find(number) == 0:
@@ -27,6 +30,7 @@ def easy(number):
     return "You can't able to got it correctly \n \t------You Loose------"
 
 def hard(number):
+    """Set's the difficulty mode to hard"""
     for i in range (5):
         print(f"    {5-i} rounds remaining")
         if find(number) == 0:
