@@ -1,5 +1,7 @@
 import random
+from time import sleep
 from art import logo
+from clear import *
 
 def get_card():
     """It return's one random card among 14 cards"""
@@ -60,11 +62,13 @@ def play():
 
     compare(user_score, comp_score)
     
-print(logo)
 while(True):
+    clear()
+    print(logo)
     inp = input("\nIf you want to play game enter 'y' ,otherwise enter 'n' : ")
     if (inp == 'y') or (inp == 'Y'):
         play()
     else:
         break
     print("\nx-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x")
+    sleep(10)

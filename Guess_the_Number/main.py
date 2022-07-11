@@ -1,5 +1,7 @@
 import random
+from time import sleep
 from art import logo
+from clear import * 
 
 def get_number():
     return random.randrange(1,100)
@@ -43,11 +45,13 @@ def play():
         print(easy(number))
     else:
         print(hard(number))
+    sleep(5)
     
     
 
-print (logo)
 while(True):
+    clear()
+    print (logo)
     print("Welcome to Number guessing Game")
     val = input("Do you Want play game ? \n Enter 'Y' for yes and 'N' for no : ")
     if (val == 'Y') or (val == 'y'):
