@@ -48,7 +48,7 @@ def play():
 
 print (logo)
 while(True):
-    print("\n\nWelcome to Number guessing Game")
+    print("Welcome to Number guessing Game")
     val = input("Do you Want play game ? \n Enter 'Y' for yes and 'N' for no : ")
     if (val == 'Y') or (val == 'y'):
         play()
