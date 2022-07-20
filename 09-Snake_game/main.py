@@ -38,7 +38,7 @@ while is_game_on:
     scr.update()
     sleep(0.1)
     food_x, food_y = food.position()    # x and y coordinates of food 
-    snake_x, snake_y = snake.position()    # x and y coordinates of snake head
+    snake_x, snake_y = snake.head.position()    # x and y coordinates of snake head
 
     # If the food and snake head colloids -> add up score and generate new food 
     if (abs(food_x-snake_x) <= 20) and (abs(food_y-snake_y) <= 20):

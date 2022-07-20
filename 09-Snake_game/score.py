@@ -5,7 +5,7 @@ displaying score, updating score when the sanke colloids with food
 
 from turtle import Turtle
 
-
+"""
 class ScoreBoard:
     Score = Turtle()
     score_count = 0
@@ -30,3 +30,31 @@ class ScoreBoard:
         self.Score.goto(0, 0)
         self.Score.write("Game Over", align="center",
                          font=("Roman New", 20, "normal"))
+"""
+
+
+# Using Inheritance
+class ScoreBoard(Turtle):
+    score_count = 0
+
+    def __init__(self):
+        super().__init__()
+        self.penup()
+        self.color("white")
+        self.goto(x=0, y=270)
+        self.hideturtle()
+        self.refresh()
+
+    def update(self):
+        self.score_count += 1
+        self.refresh()
+
+    def refresh(self):
+        self.clear()
+        self.write(f"Score : {self.score_count}", align="center",
+                   font=("Arial", 20, "normal"))
+
+    def game_over(self):
+        self.goto(0, 0)
+        self.write("Game Over", align="center",
+                   font=("Arial", 20, "normal"))
