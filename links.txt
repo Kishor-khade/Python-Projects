@@ -1,0 +1,15 @@
+https://replit.com/@KishorKhade/BlackJack
+https://replit.com/@KishorKhade/Guess-The-Number
+https://replit.com/@KishorKhade/Higher-Lower
+https://replit.com/@KishorKhade/Coffee-Machine-Project#main.py
+
+https://replit.com/@KishorKhade/Hirst-drawing
+https://replit.com/@KishorKhade/Etch-a-Sketch
+https://replit.com/@KishorKhade/Turtle-Races
+https://replit.com/@KishorKhade/Snake-game#main.py
+https://replit.com/@KishorKhade/Pong-Game#main.py
+https://replit.com/@KishorKhade/Turtle-crossing-game#main.py
+https://replit.com/@KishorKhade/Identify-states#main.py
+https://replit.com/@KishorKhade/Miles-to-kilometer#main.py
+https://replit.com/@KishorKhade/Time-Tracker#main.py
+https://replit.com/@KishorKhade/password-generator#main.py
