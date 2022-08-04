@@ -51,8 +51,8 @@ def save():
         return None
 
     new_data = {
-        website : {
-            'user' : username,
+        website: {
+            'user': username,
             'password': password,
         }
     }
@@ -65,14 +65,14 @@ def save():
             with open('data.json', 'r') as file:
                 data = json.load(file)
                 data.update(new_data)
-                
+
         except FileNotFoundError:
             data = new_data
-            
+
         finally:
             with open('data.json', 'w') as file:
                 json.dump(data, file, indent=4)
-            
+
         reset()
         messagebox.showinfo(title="Password Manager",
                             message='Details Saved successfully')
@@ -97,7 +97,9 @@ def search_password():
             user = data[website]['user']
             password = data[website]['password']
             username_input.insert(0, user)
-            password_input.insert(0,password)
+            password_input.insert(0, password)
+        else:
+            messagebox.showinfo(title='Error', message=f"No Details exists for {website}")
 
 
 #---------------------------------- UI SETUP ----------------------------------#
@@ -127,7 +129,8 @@ username_input.grid(column=1, row=2, columnspan=2, pady=5)
 password_input = Entry(width=27)
 password_input.grid(column=1, row=3, pady=5)
 
-search_btn = Button(text='search', width=13, bg='white', command=search_password)
+search_btn = Button(text='search', width=13,
+                    bg='white', command=search_password)
 search_btn.grid(column=2, row=1)
 generate_pass_btn = Button(text='Generate Password', width=13,
                            bg='white', command=generate_password)
